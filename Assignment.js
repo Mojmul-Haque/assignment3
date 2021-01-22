@@ -1,22 +1,22 @@
 // https://github.com/Mojmul-Haque/assignment3
 
+//start kilometerToMeterjs
 function kilometerToMeter(km) {
     var meter = 1000;
     var result = km * meter;
     // condition start  to check input type  
-    if (km !== Number(km)) {
-        return 'invalid value, please input a number'
+    if (km !== Number(km) || km < 0) {
+        return 'invalid value, please input a valid number'
     }
-    return result
-
+    return result;
 }
 
-var output = kilometerToMeter(3);
-console.log(output)
+var output = kilometerToMeter();
 
 // end kilometerToMeter js
 
 //start bagetCalculator js
+
 function budgetCalculator(ghori, phone, laptop) {
     // set item price;
     var onePicsGhori = 50;
@@ -30,43 +30,65 @@ function budgetCalculator(ghori, phone, laptop) {
     // condition start  to check input type  
     if (ghori, phone, laptop !== Number(ghori, phone, laptop)) {
         return 'invalid value, please input a number'
+    } else if (ghori, phone, laptop < 0) {
+        return 'invalid value, please input valid number'
     }
     //
     return totalPrice;
 }
 
-var output = budgetCalculator(4, 4, 4);
-console.log(output)
+var output = budgetCalculator();
 
 //end bagetCalculator js
 
-// start hotelCost js
 
 function hotelCost(day) {
     var payment = 0;
-    if (day > 0 && day < 1) {
+    if (day < 0) {
+        return 'enter a valid value'
+    } //break negative value
+    else if (day <= 1 && day && day !== String(day)) {
         payment = 100;
     } // under 1 days payment
-    else if (day <= 10) {
+    else if (day <= 10 && day !== String(day)) {
         payment = day * 100;
 
-    } // end statement here 10 days payment calculation
-    else if (day > 10 && day <= 20) {
+    } // end 10 days payment calculation
+    else if (day > 10 && day <= 20 && day !== String(day)) {
         var countDay = day - 10;
         payment = (10 * 100) + (countDay * 80);
-    } // end statement here 20 days payment calculation
-    else if (day > 20) {
+    } // end 20 days payment calculation
+    else if (day > 20 && day !== String(day)) {
         var countDay = day - 20;
         payment = (10 * 100) + (10 * 80) + (countDay * 50);
-    } // end statement unlimited days payment calculation
-    else {
-        day !== Number(day)
+    } // end  unlimited days payment calculation
+    else if (day !== Number(day)) {
+
         return 'Invalid value. Please, input a number'
     }
     return payment;
 }
 
-var output = hotelCost(26);
-console.log(output)
+var output = hotelCost();
 
-// end hotelCost js
+//end hoteCost js
+
+var names = ['Mojmul', 'Alamin', 'Sultan', 'Rakibul', 'Zahirul', 'Shahariar Najim Nur']
+
+function megaFriend(name) {
+    var bigName = name[0];
+    for (var i = 0; i < name.length; i++) {
+        var newName = name[i];
+        if (newName.length > bigName.length) {
+            bigName = newName;
+        }
+    }
+    if (name == '' || name == ' ' || name == Number(name)) {
+        return 'Enter your Friend Name'
+    }
+    return bigName;
+}
+
+var output = megaFriend();
+
+//end megaFrien js;
