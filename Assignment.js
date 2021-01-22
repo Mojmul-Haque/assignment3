@@ -13,27 +13,34 @@ function kilometerToMeter(km) {
 
 var outputKm = kilometerToMeter();
 
+
 // end kilometerToMeter js
 
 //start bagetCalculator js
 
 function budgetCalculator(ghori, phone, laptop) {
+
     // set item price;
+
     var onePicsGhori = 50;
     var onePicsPhone = 100;
     var onePicsLaptop = 500;
+
     //calculate item price;
+
     var getGhoriPrice = onePicsGhori * ghori;
     var getPhonePrice = onePicsPhone * phone;
     var getLaptopPrice = onePicsLaptop * laptop
     var totalPrice = getGhoriPrice + getPhonePrice + getLaptopPrice; //total price
+
     // condition start  to check input type  
     if (ghori, phone, laptop !== Number(ghori, phone, laptop)) {
         return 'invalid value, please input a number'
     } else if (ghori, phone, laptop < 0) {
         return 'invalid value, please input valid number'
     }
-    //
+
+
     return totalPrice;
 }
 
@@ -43,6 +50,8 @@ var outputBudget = budgetCalculator();
 
 
 function hotelCost(day) {
+
+
     var payment = 0;
     if (day < 0) {
         return 'enter a valid value'
@@ -66,29 +75,42 @@ function hotelCost(day) {
 
         return 'Invalid value. Please, input a number'
     }
+
+
     return payment;
+
 }
 
 var outputCost = hotelCost();
 
+
 //end hoteCost js
+
+
 
 var names = ['Mojmul', 'Alamin', 'Sultan', 'Rakibul', 'Zahirul', 'Shahariar Najim Nur']
 
 function megaFriend(name) {
+
     var bigName = name[0];
     for (var i = 0; i < name.length; i++) {
+
         var newName = name[i];
         if (newName.length > bigName.length) {
             bigName = newName;
         }
+
     }
+
+
     if (name == '' || name == ' ' || name == Number(name)) {
         return 'Enter your Friend Name'
     }
+
+
     return bigName;
+
 }
 
 var outputFriend = megaFriend();
-
-//end megaFrien js;
+//end megaFriend js;
