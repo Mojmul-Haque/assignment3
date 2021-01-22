@@ -11,7 +11,7 @@ function kilometerToMeter(km) {
     return result;
 }
 
-var output = kilometerToMeter();
+var outputKm = kilometerToMeter();
 
 // end kilometerToMeter js
 
@@ -37,7 +37,7 @@ function budgetCalculator(ghori, phone, laptop) {
     return totalPrice;
 }
 
-var output = budgetCalculator();
+var outputBudget = budgetCalculator();
 
 //end bagetCalculator js
 
@@ -69,7 +69,7 @@ function hotelCost(day) {
     return payment;
 }
 
-var output = hotelCost();
+var outputCost = hotelCost();
 
 //end hoteCost js
 
@@ -89,6 +89,6 @@ function megaFriend(name) {
     return bigName;
 }
 
-var output = megaFriend();
+var outputFriend = megaFriend();
 
 //end megaFrien js;
